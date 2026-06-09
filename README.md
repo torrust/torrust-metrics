@@ -1,5 +1,7 @@
 # Torrust Metrics
 
+[![Testing](https://github.com/torrust/torrust-metrics/actions/workflows/testing.yaml/badge.svg)](https://github.com/torrust/torrust-metrics/actions/workflows/testing.yaml)
+
 A comprehensive metrics library providing type-safe metric collection, aggregation, and Prometheus export functionality. Reusable across any Rust project in the Torrust organisation.
 
 ## Overview
