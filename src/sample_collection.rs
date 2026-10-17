@@ -308,7 +308,7 @@ mod tests {
 
             let prometheus_output = collection.to_prometheus();
 
-            assert!(!prometheus_output.is_empty());
+            assert_ne!(prometheus_output, "");
         }
 
         #[test]
