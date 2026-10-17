@@ -88,6 +88,20 @@ let avg_response_time = metrics.avg(
 println!("Average response time: {:?}", avg_response_time);
 ```
 
+`Sum` returns an `f64` for both counters and gauges. To get the exact `u64` total of a
+counter (no rounding above `2^53`), use `SumCounter`:
+
+```rust
+use torrust_metrics::metric_collection::aggregate::sum::SumCounter;
+
+let total_requests: Option<u64> = metrics.sum_counter(
+    &metric_name!("requests_total"),
+    &[("server", "tracker-01")].into(),
+);
+```
+
+It returns `None` if the metric does not exist or is not a counter.
+
 ## Architecture
 
 ### Core Components
