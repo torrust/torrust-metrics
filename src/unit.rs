@@ -80,7 +80,7 @@ mod tests {
         let c = u;
         assert_eq!(u, c);
         let s = format!("{u:?}");
-        assert!(!s.is_empty());
+        assert_ne!(s, "");
         let mut set = std::collections::HashSet::new();
         set.insert(u);
         assert!(set.contains(&Unit::Count));

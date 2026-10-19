@@ -576,8 +576,8 @@ mod tests {
         for (name, value) in label_set.iter() {
             count += 1;
             // Verify we can access name and value
-            assert!(!name.to_string().is_empty());
-            assert!(!value.to_string().is_empty());
+            assert_ne!(name.to_string(), "");
+            assert_ne!(value.to_string(), "");
         }
 
         assert_eq!(count, 2);
