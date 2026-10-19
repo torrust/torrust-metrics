@@ -24,7 +24,7 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-torrust-metrics = "0.1.0"
+torrust-metrics = "0.2.0"
 ```
 
 ### Basic Usage
